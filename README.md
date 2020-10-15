@@ -365,3 +365,6 @@ and the passangers who survived are:
 3. High fare
 
 Based on age of passengers, the higher number of passengers who didn't survived has age in range of 20-40 years old. However, in the same range of age, there are a number of passengers who survived although in small numbers. Based on model prediction, about 79.37% model predict that the passengers are didn't survived and survived where the mised classification rate is about 20.62%. This model is good enough to predict passengers who survived or didn't survived.
+
+# Source
+https://www.kaggle.com/c/titanic/data
