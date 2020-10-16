@@ -135,7 +135,7 @@ Parch     0.081629  0.018443 -0.179191  0.414838  1.000000  0.216225
 Fare      0.257307 -0.549500  0.091566  0.159651  0.216225  1.000000
 ```
 In generally, the survived is inversely correlated with Pclass (Passanger Class) as a higher correlation from other features. It means the passangers who survived are in the fisrt class (Pclass = 1), where the first class indicates high socio-economic status. The Pclass also inversely correlated with Fare where the first class has high fare (expensive) and third class has low fare (cheap). It means, the passengers who survived are domainted in first class. On the other hand, the survived is weak correlated to Age, SibSp (Siblings/Spouses) and Parch (Parrents/Children).
-## How much passenger who aboard in RMS Titanic by Gender?
+## How many passengers aboard on RMS Titanic?
 ```
 print('\n[10] Passanger who aboard in RMS titanic by Gender')
 print('Female:', df[df['Sex'] == 'female']['Sex'].count())
@@ -147,7 +147,7 @@ print('Male:', df[df['Sex'] == 'male']['Sex'].count())
 Female: 314
 Male: 577
 ```
-## How much passengers are survived by overall?
+## How many passenger survived by overall?
 ```
 print('\n[11] Passanger who survived and did not survived')
 print('Survived:', df[df['Survived'] == 1]['Survived'].count())
@@ -163,7 +163,7 @@ Survived: 342
 No Survived: 549
 ```
 ![Figure1. Survived](https://github.com/auliakhalqillah/Titanic_Analysis/blob/main/titanic_survived_1.png)
-## How much passengers are survived and aren't survived by Gender?
+## How many passengers survived and didn't survive by Gender?
 ```
 print('\n[12] Passanger who survived by Gender')
 print('Female :',df[(df['Survived'] == 1) & (df['Sex'] == 'female')]['Survived'].count())
@@ -186,7 +186,7 @@ Female : 81
 Male : 468
 ```
 ![Figure2. Gender](https://github.com/auliakhalqillah/Titanic_Analysis/blob/main/titanic_sex_2.png)
-## How much passangers are survived by Pclass?
+## How many passanger survived by Pclass?
 ```
 print('\n[14] Passanger who survived and did not survived by Pclass')
 print(df.groupby(['Survived','Pclass']).size())
@@ -209,7 +209,7 @@ dtype: int64
 
 RMS Titanic was boarded 891 passengers consisting of 314 female passengers and 577 male passengers. Based on these data, about 342 passengers are survived and 549 passengers are not survived. By 342 passengers are survived, as many as 233 passngers are female and 109 passengers are male. By 549 passengers are not survived, as many as 81 passengers are female and 468 passengers are male. Female passengers are high number of survived than male passengers. Furthermore, the high number of passangers who survived are in the first class about 136 passengers and the high number of passengers who didn't survived about 372 passengers are in third class.
 
-## How Age distribution in RMS Titanic?
+## How Passengers Age distribution on RMS Titanic?
 ```
 print('\n[15] Age distribution in RMS Titanic')
 plt.figure(4, figsize=(10,6))
@@ -225,7 +225,7 @@ plt.legend()
 
 Based on Age distributions, the passengers who aboard in RMS Titanic are dominated by passengers who has age in range 20 - 40 years old. The age distributions of survived passengers are less than to age distributions of didn't survived passengers. It means many passengers in the age range of 20 - 40 years old who didn't survived.
 
-## How much SibSp of survived?
+## How many SibSp of survived?
 ```
 print('\n[16] Siblings/Spouses of survived')
 print('Survived by SibSp:', df[df['Survived'] == 1]['SibSp'].count())
@@ -243,7 +243,7 @@ Not Survived by SibSp: 549
 
 Based on number of siblings/spouses, many victims didn't aboard with their siblings/spouses or just aboard alone. However, there are some victims that aboard with theirs siblings/spouses. On the other hand, there are still a number of survived passengers either no siblings or no spouses about 342 passengers.
 
-## How much Parch of survived?
+## How many Parch of survived?
 ```
 print('\n[17] Parents/Children of survived')
 print('Survived by Parch:', df[df['Survived'] == 1]['Parch'].count())
