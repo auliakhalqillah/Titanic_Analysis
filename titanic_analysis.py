@@ -68,12 +68,12 @@ print(correaltion)
 # It means, the passengers who survived are domainted in first class. On the other hand, the survived is weak correlated to Age, 
 # SibSp (Siblings/Spouses) and Parch (Parrents/Children).
 
-# How much passenger who aboard in RMS Titanic by Gender?
+# How many passengers aboard on RMS Titanic?
 print('\n[10] Passanger who aboard in RMS titanic by Gender')
 print('Female:', df[df['Sex'] == 'female']['Sex'].count())
 print('Male:', df[df['Sex'] == 'male']['Sex'].count())
 
-# How much passenger who survived by overall?
+# How many passenger survived by overall?
 print('\n[11] Passanger who survived and did not survived')
 print('Survived:', df[df['Survived'] == 1]['Survived'].count())
 print('No Survived:', df[df['Survived'] == 0]['Survived'].count())
@@ -81,19 +81,18 @@ print('No Survived:', df[df['Survived'] == 0]['Survived'].count())
 ax = sns.countplot(x = 'Survived', data = df)
 ax.set_title('Number of Survived and didn\'t Survived')
 
-# How much passanger who survived by Gender?
+# How many passengers survived and didn't survive by Gender?
 print('\n[12] Passanger who survived by Gender')
 print('Female :',df[(df['Survived'] == 1) & (df['Sex'] == 'female')]['Survived'].count())
 print('Male :',df[(df['Survived'] == 1) & (df['Sex'] == 'male')]['Survived'].count())
 
-# How much passanger who not survived by Gender?
 print('\n[13] Passanger who did not survived by Gender')
 print('Female :',df[(df['Survived'] == 0) & (df['Sex'] == 'female')]['Survived'].count())
 print('Male :',df[(df['Survived'] == 0) & (df['Sex'] == 'male')]['Survived'].count())
 
 sns.catplot(x='Survived', col='Sex', kind='count', data = df)
 
-# How much passanger who survived by Pclass?
+# How many passanger survived by Pclass?
 print('\n[14] Passanger who survived and did not survived by Pclass')
 print(df.groupby(['Survived','Pclass']).size())
 
@@ -107,7 +106,7 @@ sns.catplot(x='Survived',col='Pclass',data=df,kind='count')
 # of passangers who survived are in the first class about 136 passengers and the high number of 
 # passengers who didn't survived about 372 passengers are in third class.
 
-# How about Age distribution in RMS Titanic?
+# How Passengers Age distribution on RMS Titanic?
 print('\n[15] Age distribution in RMS Titanic')
 plt.figure(4, figsize=(10,6))
 plt.hist(df['Age'], bins=10, edgecolor='black',label='Age distribution in RMS Titanic',alpha=0.5)
@@ -121,7 +120,7 @@ plt.legend()
 # The age distributions of survived passengers are less than to age distributions of didn't survived passengers. It means many passengers
 # in the age range of 20 - 40 years old who didn't survived.
 
-# How about SibSp of survived?
+# How many SibSp of survived?
 print('\n[16] Siblings/Spouses of survived')
 print('Survived by SibSp:', df[df['Survived'] == 1]['SibSp'].count())
 print('Not Survived by SibSp:', df[df['Survived'] == 0]['SibSp'].count())
@@ -130,11 +129,12 @@ sns.catplot(x='Survived', col='SibSp', data=df, kind='count')
 # some victims that aboard with theirs siblings/spouses. On the other hand, there are still a number of survived passengers either no 
 # siblings or no spouses about 342 passengers.
 
-# How about Parch of survived?
-sns.catplot(x='Survived', col='Parch', data=df, kind='count')
+# How many Parch of survived?
 print('\n[17] Parents/Children of survived')
 print('Survived by Parch:', df[df['Survived'] == 1]['Parch'].count())
 print('Not Survived by Parch:', df[df['Survived'] == 0]['Parch'].count())
+
+sns.catplot(x='Survived', col='Parch', data=df, kind='count')
 # Based on number of parents/children, many victims didn't aboard with their parents/children or just aboard alone. However, there are
 # some victims that aboard with theirs parents/children. On the other hand, there are still a number of survived passengers either no
 # parents or no children about 342 passengers.
