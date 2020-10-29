@@ -352,7 +352,7 @@ Recall (Positive Rate): 69.04761904761905
 Specificity (Negative Rate): 85.61151079136691
 ```
 
-Percentage score that passengres who actually didn't survived and survived is high enough about 79.37 %. About 74.35 % model is correct to predict the passengers who actually survived and about 85.61 % model predict the passengers who didn't survived. The mised classification rate of this model is about 20.62 %. That means, this model is good enough to predict passengers who survived or didn't survived.
+Percentage score that passengres who actually didn't survived and survived are high enough about 79.37 %. About 74.35 % model is correct to predict the passengers who actually survived and about 85.61 % model predict the passengers who didn't survived. The mised classification rate of this model is about 20.62 %. That means, this model is good enough to predict passengers who survived or didn't survived.
 
 # Conclusions 
 The most victims of RMS Titanic are:
